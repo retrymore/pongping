@@ -1,29 +1,33 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-void bord(){
-    
-};
+void print_board(int rows, int cols);
 
 int main(){
     
-    int *&rows = new int [20];
-    int *&cols = new int [30];
+    int rows = 15;
+    int cols = 50;
 
+    vector<vector<int>> pointer_array(rows, vector<int>(cols));
+    print_board(rows, cols);
+}
 
-    for(int i = 0; i < 20; i++){
-        for(int j = 0; j < 30; j++){
-            rows[i] = 0;
-            cols[j] = 0;
-            cout << rows[i] << " " << cols[j] << " ";
+void print_board(int rows, int cols){
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            if(i ==  0 || i == rows - 1){
+                cout << "*";
+            }
+            else if(j == 0 || j == cols - 1){
+                cout << "*";
+            }
+            else{
+                cout << " ";
+            }
         }
         cout << endl;
     }
-
 }
-
-void print_bord(introws[20],){
-    for(int i =0; i < rows[]; i++)
-};
